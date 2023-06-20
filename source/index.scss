@@ -37,6 +37,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin triangle() {
+  #triangle1,
+  #triangle2,
+  #triangle3 {
+    display: none;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -102,18 +109,7 @@ footer {
   //   }
   // }
 }
-#triangle1 {
-  z-index: 1;
-  border-width: 0 0 2vh 100vw;
-}
-#triangle2 {
-  z-index: 2;
-  border-width: 0 0 5vh 100vw;
-}
-#triangle3 {
-  z-index: 3;
-  border-width: 0 0 7vh 100vw;
-}
+
 .rotate {
   transform: rotateX(180deg);
   transform: rotateZ(180deg);
@@ -144,6 +140,46 @@ footer {
       img {
         margin: 0.6em 0.6em 0.3em;
       }
+    }
+    #menu-logo {
+      position: relative;
+      display: inline-block;
+      #menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+    // #menu-logo:hover #menu
+    .show {
+      display: block;
+    }
+  }
+
+  #hero {
+    #triangle1 {
+      z-index: 1;
+      border-width: 0 0 2vh 100vw;
+    }
+    #triangle2 {
+      z-index: 2;
+      border-width: 0 0 5vh 100vw;
+    }
+    #triangle3 {
+      z-index: 3;
+      border-width: 0 0 7vh 100vw;
     }
   }
 
@@ -226,6 +262,44 @@ footer {
     );
     // background: linear-gradient(black, grey);
   }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #hero {
+    #triangle1 {
+      z-index: 1;
+      border-width: 0 0 1.5vh 100vw;
+    }
+    #triangle2 {
+      z-index: 2;
+      border-width: 0 0 3vh 100vw;
+    }
+    #triangle3 {
+      z-index: 3;
+      border-width: 0 0 5vh 100vw;
+    }
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #hero {
+    #triangle1 {
+      z-index: 1;
+      border-width: 0 0 1vh 100vw;
+    }
+    #triangle2 {
+      z-index: 2;
+      border-width: 0 0 2vh 100vw;
+    }
+    #triangle3 {
+      z-index: 3;
+      border-width: 0 0 3vh 100vw;
+    }
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  @include triangle();
+}
+@media screen and (min-width: 1201px) {
+  @include triangle();
 }
 .media {
   a {
