@@ -1,7 +1,7 @@
 :root {
   --color-primary: #3ed99a;
   --color-neutral: #96a7af;
-  --color-dark-one: #1f2e35;
+  --color-dark-one: rgb(31, 46, 53);
   --color-dark-two: #273941;
   --color-dark-tree: #475e69;
   --color-light-one: rgba(255, 255, 255, 0.05);
@@ -15,7 +15,6 @@
 }
 
 html {
-  background: var(--color-dark-one);
   color: var(--color-light-two);
   font-family: "Lora", serif;
   font-style: normal;
@@ -27,13 +26,13 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: linear-gradient(0deg, rgb(27, 40, 46), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.887), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.944));
 }
 
 body {
   max-width: 75em;
 }
 
-head,
 body,
 footer {
   height: 100%;
@@ -44,11 +43,11 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 header h1 {
   color: rgb(63, 219, 156);
-  margin: 0.6em 2em 0.3em;
+  margin: 0.6em 0em 0.3em;
 }
 header #menu {
   width: 100%;
@@ -207,7 +206,17 @@ a:visited {
   display: none;
 }
 
+footer {
+  padding: 1.2em 0 0.2em;
+}
+footer p {
+  margin-bottom: 1.25em;
+}
+
 @media screen and (max-width: 480px) {
+  header {
+    justify-content: space-between;
+  }
   header h1 {
     display: none;
   }
@@ -261,12 +270,11 @@ a:visited {
     flex-wrap: nowrap;
     align-items: center;
   }
-  footer {
-    padding: 1.2em 0 0.2em;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.281) 0%, rgba(107, 114, 115, 0) 100%);
-  }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    justify-content: space-between;
+  }
   header h1 {
     display: none;
   }
@@ -363,21 +371,17 @@ a:visited {
     align-items: center;
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
+@media screen and (min-width: 1025px) {
   #triangle1,
   #triangle2,
   #triangle3 {
     display: none;
   }
-  header #menu-logo img {
-    display: none;
+  header {
+    margin-top: 1.25em;
   }
-}
-@media screen and (min-width: 1201px) {
-  #triangle1,
-  #triangle2,
-  #triangle3 {
-    display: none;
+  header #logo img {
+    width: 6.25em;
   }
   header #menu-logo img {
     display: none;
