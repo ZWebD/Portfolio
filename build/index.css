@@ -26,7 +26,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(0deg, rgb(27, 40, 46), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.887), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.944));
+  background: linear-gradient(0deg, rgb(24, 35, 42), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.887), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.944), rgba(24, 35, 42, 0.999));
 }
 
 body {
@@ -59,6 +59,8 @@ header #menu a {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0.6em 0.5em 0.3em;
+  font-size: x-large;
+  font-weight: 700;
 }
 
 .content {
@@ -172,12 +174,6 @@ a:visited {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-}
-#projects .content .section {
-  font-size: 6em;
-  line-height: 0;
-}
-#projects .content .project {
   display: flex;
   padding: 1em;
   margin: 1em;
@@ -365,10 +361,16 @@ footer p {
   header .show {
     display: block;
   }
+  #hero .content h1 span {
+    display: none;
+  }
   #projects .content .project {
     max-width: 44%;
     flex-wrap: wrap;
     align-items: center;
+  }
+  .section {
+    font-size: 6em;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -385,6 +387,20 @@ footer p {
   }
   header #menu-logo img {
     display: none;
+  }
+  #hero .content h1 span {
+    display: none;
+  }
+  #projects .content :nth-last-child(odd) {
+    flex-direction: row-reverse;
+  }
+  #projects .content .project {
+    max-width: 44%;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .section {
+    font-size: 7em;
   }
 }
 .media a svg {
