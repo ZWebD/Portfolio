@@ -1,11 +1,11 @@
 :root {
-  --color-primary: #3ed99a;
-  --color-neutral: #96a7af;
+  --color-primary: rgb(62, 217, 154);
+  --color-neutral: rgb(150, 167, 175);
   --color-dark-one: rgb(31, 46, 53);
-  --color-dark-two: #273941;
-  --color-dark-tree: #475e69;
+  --color-dark-two: rgb(39, 57, 65);
+  --color-dark-tree: rgb(71, 94, 105);
   --color-light-one: rgba(255, 255, 255, 0.05);
-  --color-light-two: #cac9c9;
+  --color-light-two: rgb(202, 201, 201);
 }
 
 * {
@@ -31,6 +31,12 @@ html {
 
 body {
   max-width: 75em;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body,
@@ -43,17 +49,26 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
 }
-header h1 {
+header #brand {
+  margin: 0 2.5em;
+  display: flex;
+  align-items: center;
+}
+header #brand #logo img {
+  margin: 0.5em 0.5em 0;
+}
+header #brand h1 {
   color: rgb(63, 219, 156);
-  margin: 0.6em 0em 0.3em;
 }
-header #menu {
+header #menu-logo img {
+  margin: 0.6em 2em 0.3em;
+}
+header #menu-logo #menu {
   width: 100%;
   display: flex;
 }
-header #menu a {
+header #menu-logo #menu a {
   color: #3ed99a;
   display: flex;
   flex-direction: row;
@@ -94,9 +109,10 @@ header #menu a {
 .section {
   position: absolute;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(62, 217, 155, 0.431372549), rgba(31, 46, 53, 0.921));
+  background: linear-gradient(180deg, rgba(62, 217, 154, 0.9), rgba(45, 164, 116, 0.9), rgba(20, 29, 34, 0.9));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
   font-weight: 700;
   font-size: 5em;
   line-height: 1.8em;
@@ -118,6 +134,13 @@ a:visited {
   text-decoration: none;
 }
 
+#hero,
+#about,
+#projects,
+#contact {
+  min-height: 33.3333333333vh;
+}
+
 #hero {
   display: flex;
   flex-direction: column;
@@ -127,8 +150,9 @@ a:visited {
   gap: 3em;
 }
 #hero h1 {
+  display: flex;
+  justify-content: center;
   color: #ffffff;
-  margin: 2em;
 }
 
 #about {
@@ -148,7 +172,8 @@ a:visited {
 #about .content p {
   padding: 1em;
   border-radius: 1em;
-  background-color: rgba(0, 0, 0, 0.0823529412);
+  background-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 1em;
   word-wrap: break-word;
   hyphens: auto;
@@ -181,7 +206,8 @@ a:visited {
   margin: 1em;
   gap: 1em;
   border-radius: 1em;
-  background-color: rgba(0, 0, 0, 0.0823529412);
+  background-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #projects .content .project .detail {
   flex-grow: 0;
@@ -200,7 +226,6 @@ a:visited {
   margin: 5em 0 3em;
 }
 #contact #contact_form {
-  padding: 1.2em;
   display: none;
 }
 
@@ -215,35 +240,14 @@ footer p {
   header {
     justify-content: space-between;
   }
-  header h1 {
-    display: none;
-  }
-  header div img {
-    margin: 0.6em 2em 0.3em;
-  }
-  header #menu-logo {
-    position: relative;
-    display: inline-block;
+  header #brand h1 {
+    font-size: large;
   }
   header #menu-logo #menu {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
   }
-  header #menu-logo #menu a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  header #menu-logo #menu:hover {
-    background-color: #f1f1f1;
-  }
-  header .show {
-    display: block;
+  #hero {
+    min-height: 0;
   }
   #hero #triangle1 {
     z-index: 1;
@@ -256,6 +260,9 @@ footer p {
   #hero #triangle3 {
     z-index: 3;
     border-width: 0 0 7vh 100vw;
+  }
+  #hero h1 {
+    margin: 2em;
   }
   #about .content {
     max-width: none;
@@ -271,37 +278,16 @@ footer p {
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   header {
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
-  header h1 {
-    display: none;
-  }
-  header div img {
-    margin: 0.6em 2em 0.3em;
-  }
-  header #menu-logo {
-    position: relative;
-    display: inline-block;
+  header #brand h1 {
+    font-size: x-large;
   }
   header #menu-logo #menu {
     display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
   }
-  header #menu-logo #menu a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  header #menu-logo #menu:hover {
-    background-color: #f1f1f1;
-  }
-  header .show {
-    display: block;
+  #hero {
+    min-height: 0;
   }
   #hero #triangle1 {
     z-index: 1;
@@ -315,6 +301,9 @@ footer p {
     z-index: 3;
     border-width: 0 0 5vh 100vw;
   }
+  #hero h1 {
+    margin: 2em;
+  }
   #projects .content .project {
     max-width: none;
     flex-wrap: nowrap;
@@ -327,43 +316,17 @@ footer p {
   #triangle3 {
     display: none;
   }
-  header :nth-child(1) {
-    order: 2;
+  header {
+    margin-top: 1em;
+    justify-content: space-around;
   }
-  header :nth-child(2) {
-    order: 1;
+  header #brand #logo img {
+    width: 3.5em;
   }
-  header :nth-child(3) {
-    order: 3;
-  }
-  header div img {
-    margin: 0.6em 2em 0.3em;
-  }
-  header #menu-logo {
-    position: relative;
-    display: inline-block;
+  header #brand h1 {
+    font-size: xx-large;
   }
   header #menu-logo #menu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  header #menu-logo #menu a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  header #menu-logo #menu:hover {
-    background-color: #f1f1f1;
-  }
-  header .show {
-    display: block;
-  }
-  #hero .content h1 span {
     display: none;
   }
   #projects .content .project {
@@ -383,21 +346,31 @@ footer p {
   }
   header {
     margin-top: 1.25em;
+    justify-content: space-around;
   }
-  header #logo img {
+  header #brand #logo img {
     width: 6.25em;
+  }
+  header #brand h1 {
+    font-size: 2.5em;
   }
   header #menu-logo img {
     display: none;
   }
-  #hero .content h1 span {
-    display: none;
+  header #menu-logo #menu a {
+    margin: 0;
+  }
+  header #menu-logo #menu :nth-child(2) {
+    margin: 0 0.5em;
   }
   #projects .content :nth-last-child(odd) {
     flex-direction: row-reverse;
+    margin-right: 0;
+  }
+  #projects .content :nth-child(even) {
+    margin-left: 0;
   }
   #projects .content .project {
-    max-width: 44%;
     flex-wrap: nowrap;
     align-items: center;
   }
@@ -408,6 +381,7 @@ footer p {
 .media a svg {
   margin: 2em;
   fill: var(--color-primary);
+  filter: drop-shadow(8px 8px 1px rgba(0, 0, 0, 0.3));
 }
 
 /* Content form */
