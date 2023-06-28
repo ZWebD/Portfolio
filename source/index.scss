@@ -29,7 +29,10 @@
 @mixin section-title() {
   position: absolute;
   z-index: -1;
-  color: var(--color-light-one);
+  // color: var(--color-light-one);
+  background: linear-gradient(180deg, #3ed99b6e, rgba(31, 46, 53, 0.921));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 700;
   font-size: 5em;
   line-height: 1.8em;

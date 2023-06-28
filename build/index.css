@@ -94,7 +94,9 @@ header #menu a {
 .section {
   position: absolute;
   z-index: -1;
-  color: var(--color-light-one);
+  background: linear-gradient(180deg, rgba(62, 217, 155, 0.431372549), rgba(31, 46, 53, 0.921));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 700;
   font-size: 5em;
   line-height: 1.8em;
