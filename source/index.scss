@@ -182,10 +182,16 @@ a {
 }
 
 #hero,
-#about,
 #projects,
+#about,
 #contact {
   min-height: calc(100vh / 3);
+}
+
+#projects,
+#about,
+#contact {
+  margin: 35vw 0 0;
 }
 
 #hero {
@@ -202,7 +208,7 @@ a {
 
 #about {
   @include flex-center();
-  margin: 5em 0 3em;
+  // margin: 5em 0 3em;
   .content {
     max-width: 80%;
     .section {
@@ -251,7 +257,7 @@ a {
       .detail {
         flex-grow: 0;
         p {
-          font-size: 0.8em;
+          // font-size: 0.8em;
           padding-bottom: 0.5em;
         }
       }
@@ -261,9 +267,9 @@ a {
 
 #contact {
   @include flex-center();
-  margin: 5em 0 3em;
+  // margin: 5em 0 3em;
   #contact_form {
-    // padding: 1.2em;
+    padding: 1.2em;
     display: none;
   }
 }
@@ -276,14 +282,32 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  * {
+    p {
+      font-size: 1em;
+    }
+  }
   header {
-    justify-content: space-between;
     #brand {
+      justify-content: space-between;
+      // h1:nth-child(1) {
+      //   display: none;
+      //   // justify-content: center;
+      // }
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      // h1:nth-last-child(1) {
+      //   display: none;
+      //   // justify-content: center;
+      // }
       h1 {
         font-size: large;
       }
     }
     #menu-logo {
+      display: none;
       #menu {
         display: none;
       }
@@ -305,7 +329,7 @@ footer {
       border-width: 0 0 7vh 100vw;
     }
     h1 {
-      margin: 2em;
+      margin: 5em 0;
     }
   }
 
@@ -327,6 +351,12 @@ footer {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  #about,
+  footer {
+    p {
+      font-size: 1em;
+    }
+  }
   header {
     justify-content: space-evenly;
     #brand {
@@ -355,7 +385,7 @@ footer {
       border-width: 0 0 5vh 100vw;
     }
     h1 {
-      margin: 2em;
+      margin: 5em 0;
     }
   }
   #projects {
@@ -370,6 +400,19 @@ footer {
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   @include triangle();
+
+  #projects,
+  #about,
+  #contact {
+    margin: 25vw 0 0;
+  }
+
+  #about,
+  footer {
+    p {
+      font-size: 1.2em;
+    }
+  }
   header {
     margin-top: 1em;
     justify-content: space-around;
@@ -406,6 +449,19 @@ footer {
 }
 @media screen and (min-width: 1025px) {
   @include triangle();
+
+  #projects,
+  #about,
+  #contact {
+    margin: 20vw 0 0;
+  }
+
+  #about,
+  footer {
+    p {
+      font-size: 1.5em;
+    }
+  }
   header {
     margin-top: 1.25em;
     justify-content: space-around;

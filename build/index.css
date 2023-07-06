@@ -135,10 +135,16 @@ a:visited {
 }
 
 #hero,
-#about,
 #projects,
+#about,
 #contact {
   min-height: 33.3333333333vh;
+}
+
+#projects,
+#about,
+#contact {
+  margin: 35vw 0 0;
 }
 
 #hero {
@@ -161,7 +167,6 @@ a:visited {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 5em 0 3em;
 }
 #about .content {
   max-width: 80%;
@@ -213,7 +218,6 @@ a:visited {
   flex-grow: 0;
 }
 #projects .content .project .detail p {
-  font-size: 0.8em;
   padding-bottom: 0.5em;
 }
 
@@ -223,9 +227,9 @@ a:visited {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 5em 0 3em;
 }
 #contact #contact_form {
+  padding: 1.2em;
   display: none;
 }
 
@@ -237,11 +241,21 @@ footer p {
 }
 
 @media screen and (max-width: 480px) {
-  header {
+  * p {
+    font-size: 1em;
+  }
+  header #brand {
     justify-content: space-between;
+  }
+  header #brand div {
+    display: flex;
+    justify-content: center;
   }
   header #brand h1 {
     font-size: large;
+  }
+  header #menu-logo {
+    display: none;
   }
   header #menu-logo #menu {
     display: none;
@@ -262,7 +276,7 @@ footer p {
     border-width: 0 0 7vh 100vw;
   }
   #hero h1 {
-    margin: 2em;
+    margin: 5em 0;
   }
   #about .content {
     max-width: none;
@@ -277,6 +291,10 @@ footer p {
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
+  #about p,
+  footer p {
+    font-size: 1em;
+  }
   header {
     justify-content: space-evenly;
   }
@@ -302,7 +320,7 @@ footer p {
     border-width: 0 0 5vh 100vw;
   }
   #hero h1 {
-    margin: 2em;
+    margin: 5em 0;
   }
   #projects .content .project {
     max-width: none;
@@ -315,6 +333,15 @@ footer p {
   #triangle2,
   #triangle3 {
     display: none;
+  }
+  #projects,
+  #about,
+  #contact {
+    margin: 25vw 0 0;
+  }
+  #about p,
+  footer p {
+    font-size: 1.2em;
   }
   header {
     margin-top: 1em;
@@ -343,6 +370,15 @@ footer p {
   #triangle2,
   #triangle3 {
     display: none;
+  }
+  #projects,
+  #about,
+  #contact {
+    margin: 20vw 0 0;
+  }
+  #about p,
+  footer p {
+    font-size: 1.5em;
   }
   header {
     margin-top: 1.25em;
