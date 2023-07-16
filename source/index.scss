@@ -115,8 +115,16 @@ header {
     #logo {
       display: flex;
       align-items: center;
-      // min-width: -webkit-fill-available;
-      // min-width: -moz-fill-available;
+      img {
+        transform: rotateY(0deg);
+        transition: all 500ms ease;
+      }
+    }
+    #logo {
+      img.active {
+        transform: rotateY(360deg);
+        transition: all 500ms ease;
+      }
     }
     h1 {
       margin: 0 0.5em 0;
@@ -127,14 +135,17 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-
+    position: fixed;
+    top: -100%;
+    transition: all 500ms ease;
     a {
       width: -webkit-fill-available;
       width: -moz-fill-available;
-      color: #3ed99a;
+      color: #3ed99a00;
       margin: 0.6em 0 0.3em;
       font-size: x-large;
       font-weight: 700;
+      transition: all 250ms ease;
     }
   }
   #menu-v {
@@ -142,6 +153,33 @@ header {
     width: -moz-fill-available;
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 70%;
+    transition: all 500ms ease;
+    img {
+      transition: all 500ms ease;
+    }
+  }
+  #menu.active {
+    top: 100%;
+    transition: all 500ms ease;
+    a {
+      color: #3ed99a;
+      transition: all 500ms ease-in;
+      &:hover {
+        color: #ffffff;
+        transition: all 250ms ease;
+      }
+    }
+  }
+  #menu-v.active {
+    top: 170%;
+    margin-bottom: 20%;
+    img.active {
+      transform: rotateZ(180deg);
+      transform: rotateX(180deg);
+      transition: all 500ms ease;
+    }
   }
 }
 
@@ -205,11 +243,17 @@ a {
 #hero {
   @include flex-center();
   gap: 3em;
+  transition: all 500ms ease;
   h1 {
     display: flex;
     justify-content: center;
     color: #ffffff;
   }
+}
+
+#hero.active {
+  margin-top: 25%;
+  transition: all 500ms ease;
 }
 
 #about {
@@ -309,6 +353,10 @@ footer {
         font-size: large;
       }
     }
+
+    #menu-v.active {
+      top: 200%;
+    }
   }
 
   #hero {
@@ -367,6 +415,9 @@ footer {
       h1 {
         font-size: x-large;
       }
+    }
+    #menu-v.active {
+      top: 220%;
     }
   }
   #hero {
@@ -429,6 +480,9 @@ footer {
       h1 {
         font-size: xx-large;
       }
+    }
+    #menu-v.active {
+      top: 200%;
     }
   }
 

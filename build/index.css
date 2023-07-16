@@ -62,6 +62,14 @@ header #brand #logo {
   display: flex;
   align-items: center;
 }
+header #brand #logo img {
+  transform: rotateY(0deg);
+  transition: all 500ms ease;
+}
+header #brand #logo img.active {
+  transform: rotateY(360deg);
+  transition: all 500ms ease;
+}
 header #brand h1 {
   margin: 0 0.5em 0;
   color: rgb(63, 219, 156);
@@ -70,20 +78,51 @@ header #menu {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  position: fixed;
+  top: -100%;
+  transition: all 500ms ease;
 }
 header #menu a {
   width: -webkit-fill-available;
   width: -moz-fill-available;
-  color: #3ed99a;
+  color: rgba(62, 217, 154, 0);
   margin: 0.6em 0 0.3em;
   font-size: x-large;
   font-weight: 700;
+  transition: all 250ms ease;
 }
 header #menu-v {
   width: -webkit-fill-available;
   width: -moz-fill-available;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 70%;
+  transition: all 500ms ease;
+}
+header #menu-v img {
+  transition: all 500ms ease;
+}
+header #menu.active {
+  top: 100%;
+  transition: all 500ms ease;
+}
+header #menu.active a {
+  color: #3ed99a;
+  transition: all 500ms ease-in;
+}
+header #menu.active a:hover {
+  color: #ffffff;
+  transition: all 250ms ease;
+}
+header #menu-v.active {
+  top: 170%;
+  margin-bottom: 20%;
+}
+header #menu-v.active img.active {
+  transform: rotateZ(180deg);
+  transform: rotateX(180deg);
+  transition: all 500ms ease;
 }
 
 .content {
@@ -162,11 +201,17 @@ a:visited {
   align-items: center;
   text-align: center;
   gap: 3em;
+  transition: all 500ms ease;
 }
 #hero h1 {
   display: flex;
   justify-content: center;
   color: #ffffff;
+}
+
+#hero.active {
+  margin-top: 25%;
+  transition: all 500ms ease;
 }
 
 #about {
@@ -265,6 +310,9 @@ footer p {
   header #menu a {
     font-size: large;
   }
+  header #menu-v.active {
+    top: 200%;
+  }
   #hero {
     min-height: 0;
   }
@@ -312,6 +360,9 @@ footer p {
   }
   header #brand h1 {
     font-size: x-large;
+  }
+  header #menu-v.active {
+    top: 220%;
   }
   #hero {
     min-height: 0;
@@ -367,6 +418,9 @@ footer p {
   }
   header #brand h1 {
     font-size: xx-large;
+  }
+  header #menu-v.active {
+    top: 200%;
   }
   #projects .content .project {
     max-width: 44%;
