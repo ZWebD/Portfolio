@@ -64,15 +64,11 @@ header #brand #logo {
 }
 header #brand #logo img {
   transform: rotateY(0deg);
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: transform 500ms ease;
 }
 header #brand #logo img.active {
   transform: rotateY(360deg);
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: transform 500ms ease;
 }
 header #brand h1 {
   margin: 0 0.5em 0;
@@ -84,9 +80,7 @@ header #menu {
   justify-content: space-evenly;
   position: fixed;
   top: -100%;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: top 500ms ease;
 }
 header #menu a {
   width: -webkit-fill-available;
@@ -95,9 +89,7 @@ header #menu a {
   margin: 0.6em 0 0.3em;
   font-size: x-large;
   font-weight: 700;
-  -moz-transition: all 250ms ease;
-  -webkit-transition: all 250ms ease;
-  transition: all 250ms ease;
+  transition: color 250ms ease;
 }
 header #menu-v {
   width: -webkit-fill-available;
@@ -106,32 +98,22 @@ header #menu-v {
   justify-content: center;
   position: fixed;
   top: 70%;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: top 500ms ease;
 }
 header #menu-v img {
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: 500ms all ease;
 }
 header #menu.active {
   top: 100%;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: top 500ms ease;
 }
 header #menu.active a {
   color: #3ed99a;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease-in;
+  transition: color 500ms ease-in;
 }
 header #menu.active a:hover {
   color: #ffffff;
-  -moz-transition: all 250ms ease;
-  -webkit-transition: all 250ms ease;
-  transition: all 250ms ease;
+  transition: color 250ms ease;
 }
 header #menu-v.active {
   top: 170%;
@@ -140,9 +122,7 @@ header #menu-v.active {
 header #menu-v.active img.active {
   transform: rotateZ(180deg);
   transform: rotateX(180deg);
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  transition: all 500ms ease;
+  transition: transform 500ms ease;
 }
 
 .content {
