@@ -64,11 +64,13 @@ header #brand #logo {
 }
 header #brand #logo img {
   transform: rotateY(0deg);
+  -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 header #brand #logo img.active {
   transform: rotateY(360deg);
+  -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -82,6 +84,7 @@ header #menu {
   justify-content: space-evenly;
   position: fixed;
   top: -100%;
+  -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -92,6 +95,7 @@ header #menu a {
   margin: 0.6em 0 0.3em;
   font-size: x-large;
   font-weight: 700;
+  -moz-transition: all 250ms ease;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
 }
@@ -102,25 +106,30 @@ header #menu-v {
   justify-content: center;
   position: fixed;
   top: 70%;
+  -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 header #menu-v img {
+  -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 header #menu.active {
   top: 100%;
+  -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 header #menu.active a {
   color: #3ed99a;
+  -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease-in;
 }
 header #menu.active a:hover {
   color: #ffffff;
+  -moz-transition: all 250ms ease;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
 }
@@ -132,6 +141,7 @@ header #menu-v.active img.active {
   transform: rotateZ(180deg);
   transform: rotateX(180deg);
   -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
