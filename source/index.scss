@@ -117,17 +117,17 @@ header {
       align-items: center;
       img {
         transform: rotateY(0deg);
-        // -moz-transition: all 500ms ease;
-        // -webkit-transition: all 500ms ease;
-        transition: transform 500ms ease;
+        -moz-transition: all 500ms ease;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
       }
     }
     #logo {
       img.active {
         transform: rotateY(360deg);
-        // -moz-transition: all 500ms ease;
-        // -webkit-transition: all 500ms ease;
-        transition: transform 500ms ease;
+        -moz-transition: all 500ms ease;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
       }
     }
     h1 {
@@ -141,9 +141,9 @@ header {
     justify-content: space-evenly;
     position: fixed;
     top: -100%;
-    // -moz-transition: all 500ms ease;
-    // -webkit-transition: all 500ms ease;
-    transition: top 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
     a {
       width: -webkit-fill-available;
       width: -moz-fill-available;
@@ -151,9 +151,9 @@ header {
       margin: 0.6em 0 0.3em;
       font-size: x-large;
       font-weight: 700;
-      // -moz-transition: all 250ms ease;
-      // -webkit-transition: all 250ms ease;
-      transition: color 250ms ease;
+      -moz-transition: all 250ms ease;
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease;
     }
   }
   #menu-v {
@@ -163,30 +163,36 @@ header {
     justify-content: center;
     position: fixed;
     top: 70%;
-    // -moz-transition: all 500ms ease;
-    // -webkit-transition: all 500ms ease;
-    transition: top 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
     img {
-      // -moz-transition: all 500ms ease;
-      // -webkit-transition: 500ms all ease;
-      transition: 500ms all ease;
+      animation: transformBack 500ms ease;
+      @keyframes transformBack {
+        0% {
+          transform: rotateZ(180deg) rotateX(180deg);
+        }
+        100% {
+          transform: rotateZ(0deg) rotateX(0deg);
+        }
+      }
     }
   }
   #menu.active {
     top: 100%;
-    // -moz-transition: all 500ms ease;
-    // -webkit-transition: all 500ms ease;
-    transition: top 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
     a {
       color: #3ed99a;
-      // -moz-transition: all 500ms ease;
-      // -webkit-transition: all 500ms ease;
-      transition: color 500ms ease-in;
+      -moz-transition: all 500ms ease;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease-in;
       &:hover {
         color: #ffffff;
-        // -moz-transition: all 250ms ease;
-        // -webkit-transition: all 250ms ease;
-        transition: color 250ms ease;
+        -moz-transition: all 250ms ease;
+        -webkit-transition: all 250ms ease;
+        transition: all 250ms ease;
       }
     }
   }
@@ -194,11 +200,18 @@ header {
     top: 170%;
     margin-bottom: 20%;
     img.active {
-      transform: rotateZ(180deg);
-      transform: rotateX(180deg);
+      animation: transform 500ms ease both;
+      @keyframes transform {
+        0% {
+          transform: rotateZ(0deg) rotateX(0deg);
+        }
+        100% {
+          transform: rotateZ(180deg) rotateX(180deg);
+        }
+      }
       // -webkit-transition: all 500ms ease;
       // -moz-transition: all 500ms ease;
-      transition: transform 500ms ease;
+      // transition: all 500ms ease;
     }
   }
 }
