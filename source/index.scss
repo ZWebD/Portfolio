@@ -117,12 +117,14 @@ header {
       align-items: center;
       img {
         transform: rotateY(0deg);
+        -webkit-transition: all 500ms ease;
         transition: all 500ms ease;
       }
     }
     #logo {
       img.active {
         transform: rotateY(360deg);
+        -webkit-transition: all 500ms ease;
         transition: all 500ms ease;
       }
     }
@@ -137,6 +139,7 @@ header {
     justify-content: space-evenly;
     position: fixed;
     top: -100%;
+    -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
     a {
       width: -webkit-fill-available;
@@ -145,6 +148,7 @@ header {
       margin: 0.6em 0 0.3em;
       font-size: x-large;
       font-weight: 700;
+      -webkit-transition: all 250ms ease;
       transition: all 250ms ease;
     }
   }
@@ -155,19 +159,24 @@ header {
     justify-content: center;
     position: fixed;
     top: 70%;
+    -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
     img {
+      -webkit-transition: all 500ms ease;
       transition: all 500ms ease;
     }
   }
   #menu.active {
     top: 100%;
+    -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
     a {
       color: #3ed99a;
+      -webkit-transition: all 500ms ease;
       transition: all 500ms ease-in;
       &:hover {
         color: #ffffff;
+        -webkit-transition: all 250ms ease;
         transition: all 250ms ease;
       }
     }
@@ -178,6 +187,7 @@ header {
     img.active {
       transform: rotateZ(180deg);
       transform: rotateX(180deg);
+      -webkit-transition: all 500ms ease;
       transition: all 500ms ease;
     }
   }
@@ -243,7 +253,9 @@ a {
 #hero {
   @include flex-center();
   gap: 3em;
+  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
+  // animation: animation 500ms ease 0 iteration-count direction fill-mode;
   h1 {
     display: flex;
     justify-content: center;
