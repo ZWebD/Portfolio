@@ -49,7 +49,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
   left: 0;
   top: 0;
   right: 0;
@@ -86,10 +85,7 @@ header #menu {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: -100%;
+  margin-top: -10%;
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -110,13 +106,9 @@ header #menu-v {
   width: -moz-fill-available;
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 70%;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
 }
 header #menu-v img {
+  margin-top: 2%;
   animation: transformBack 500ms ease;
 }
 @keyframes transformBack {
@@ -128,7 +120,7 @@ header #menu-v img {
   }
 }
 header #menu.active {
-  top: 100%;
+  margin-top: 0;
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -146,7 +138,6 @@ header #menu.active a:hover {
   transition: all 250ms ease;
 }
 header #menu-v.active {
-  top: 170%;
   margin-bottom: 20%;
 }
 header #menu-v.active img.active {

@@ -101,7 +101,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
+  // position: fixed;
   left: 0;
   top: 0;
   right: 0;
@@ -142,10 +142,11 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: -100%;
+    // position: fixed;
+    // left: 0;
+    // right: 0;
+    // top: -100%;
+    margin-top: -10%;
     -moz-transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
@@ -166,12 +167,14 @@ header {
     width: -moz-fill-available;
     display: flex;
     justify-content: center;
-    position: fixed;
-    top: 70%;
-    -moz-transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
+    // position: fixed;
+    // top: 70%;
+    // margin-top: -3%;
+    // -moz-transition: all 500ms ease;
+    // -webkit-transition: all 500ms ease;
+    // transition: all 500ms ease;
     img {
+      margin-top: 2%;
       animation: transformBack 500ms ease;
       @keyframes transformBack {
         0% {
@@ -184,7 +187,8 @@ header {
     }
   }
   #menu.active {
-    top: 100%;
+    // top: 100%;
+    margin-top: 0;
     -moz-transition: all 500ms ease;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
@@ -202,7 +206,7 @@ header {
     }
   }
   #menu-v.active {
-    top: 170%;
+    // top: 170%;
     margin-bottom: 20%;
     img.active {
       animation: transform 500ms ease both;
