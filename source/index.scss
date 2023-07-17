@@ -174,16 +174,19 @@ header {
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
     img {
+      -moz-transition: all 500ms ease;
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
       // margin-top: 2%;
-      animation: transformBack 500ms ease;
-      @keyframes transformBack {
-        0% {
-          transform: rotateZ(180deg) rotateX(180deg);
-        }
-        100% {
-          transform: rotateZ(0deg) rotateX(0deg);
-        }
-      }
+      // animation: transformBack 500ms ease;
+      // @keyframes transformBack {
+      //   0% {
+      //     transform: rotateZ(180deg) rotateX(180deg);
+      //   }
+      //   100% {
+      //     transform: rotateZ(0deg) rotateX(0deg);
+      //   }
+      // }
     }
   }
   #menu.active {
@@ -209,18 +212,19 @@ header {
     top: 170%;
     // margin-bottom: 20%;
     img.active {
-      animation: transform 500ms ease both;
-      @keyframes transform {
-        0% {
-          transform: rotateZ(0deg) rotateX(0deg);
-        }
-        100% {
-          transform: rotateZ(180deg) rotateX(180deg);
-        }
-      }
-      // -webkit-transition: all 500ms ease;
-      // -moz-transition: all 500ms ease;
-      // transition: all 500ms ease;
+      // animation: transform 500ms ease both;
+      // @keyframes transform {
+      //   0% {
+      //     transform: rotateZ(0deg) rotateX(0deg);
+      //   }
+      //   100% {
+      //     transform: rotateZ(180deg) rotateX(180deg);
+      //   }
+      // }
+      transform: rotateZ(180deg) rotateX(180deg);
+      -webkit-transition: all 500ms ease;
+      -moz-transition: all 500ms ease;
+      transition: all 500ms ease;
     }
   }
 }
