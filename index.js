@@ -7,7 +7,7 @@ const menu_v_img = menu_v.querySelector(`img`);
 const logo = document.querySelector(`#logo>img`);
 const hero = document.querySelector(`#hero`);
 
-menu_v.addEventListener("click", () => {
+menu_v_img.addEventListener("click", () => {
   menu.classList.toggle(`active`);
   menu_v.classList.toggle(`active`);
   menu_v_img.classList.toggle(`active`);
