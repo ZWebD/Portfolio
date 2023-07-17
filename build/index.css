@@ -49,6 +49,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   left: 0;
   top: 0;
   right: 0;
@@ -85,7 +86,7 @@ header #menu {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: -100%;
@@ -109,14 +110,13 @@ header #menu-v {
   width: -moz-fill-available;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 70%;
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 header #menu-v img {
-  position: fixed;
   animation: transformBack 500ms ease;
 }
 @keyframes transformBack {
@@ -129,7 +129,6 @@ header #menu-v img {
 }
 header #menu.active {
   top: 100%;
-  margin-top: 0;
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -348,11 +347,8 @@ footer p {
   header #menu a {
     font-size: large;
   }
-  header #menu-v img {
-    position: fixed;
-  }
-  header #menu-v.active img {
-    margin-top: 1%;
+  header #menu-v.active {
+    top: 200%;
   }
   #hero {
     min-height: 0;
