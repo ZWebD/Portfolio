@@ -97,6 +97,23 @@ footer {
   width: 100%;
 }
 
+// Transitioning
+#logo img,
+#logo img.active,
+#menu,
+#menu.active,
+#menu.active a,
+#menu-v,
+#menu-v img,
+#menu-v img.active,
+#hero,
+#hero.active {
+  transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -110,7 +127,7 @@ header {
   filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
 
   img {
-    width: 2.5em;
+    width: 2.6em;
   }
   #brand {
     margin: 0 2.5em;
@@ -119,20 +136,12 @@ header {
       display: flex;
       align-items: center;
       img {
-        transform: rotateY(0deg);
-        -moz-transition: all 500ms ease;
-        -webkit-transition: all 500ms ease;
-        transition: all 500ms ease;
+        &.active {
+          transform: rotateY(360deg);
+        }
       }
     }
-    #logo {
-      img.active {
-        transform: rotateY(360deg);
-        -moz-transition: all 500ms ease;
-        -webkit-transition: all 500ms ease;
-        transition: all 500ms ease;
-      }
-    }
+
     h1 {
       margin: 0 0.5em 0;
       color: rgba(63, 219, 156, 1);
@@ -146,10 +155,7 @@ header {
     left: 0;
     right: 0;
     top: -100%;
-    // margin-top: -10%;
-    -moz-transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
+
     a {
       width: -webkit-fill-available;
       width: -moz-fill-available;
@@ -157,9 +163,17 @@ header {
       margin: 0.6em 0 0.3em;
       font-size: x-large;
       font-weight: 700;
-      -moz-transition: all 250ms ease;
-      -webkit-transition: all 250ms ease;
-      transition: all 250ms ease;
+    }
+    &.active {
+      top: 100%;
+
+      a {
+        color: #3ed99a;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
     }
   }
   #menu-v {
@@ -169,62 +183,17 @@ header {
     justify-content: center;
     position: absolute;
     top: 70%;
-    // margin-top: -3%;
-    -moz-transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
+
     img {
-      -moz-transition: all 500ms ease;
-      -webkit-transition: all 500ms ease;
-      transition: all 500ms ease;
-      // margin-top: 2%;
-      // animation: transformBack 500ms ease;
-      // @keyframes transformBack {
-      //   0% {
-      //     transform: rotateZ(180deg) rotateX(180deg);
-      //   }
-      //   100% {
-      //     transform: rotateZ(0deg) rotateX(0deg);
-      //   }
-      // }
-    }
-  }
-  #menu.active {
-    top: 100%;
-    // margin-top: 0;
-    -moz-transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    transition: all 500ms ease;
-    a {
-      color: #3ed99a;
-      -moz-transition: all 500ms ease;
-      -webkit-transition: all 500ms ease;
-      transition: all 500ms ease-in;
+      &.active {
+        transform: rotateZ(360deg) rotateX(180deg);
+      }
       &:hover {
-        color: #ffffff;
-        -moz-transition: all 250ms ease;
-        -webkit-transition: all 250ms ease;
-        transition: all 250ms ease;
+        cursor: pointer;
       }
     }
-  }
-  #menu-v.active {
-    top: 170%;
-    // margin-bottom: 20%;
-    img.active {
-      // animation: transform 500ms ease both;
-      // @keyframes transform {
-      //   0% {
-      //     transform: rotateZ(0deg) rotateX(0deg);
-      //   }
-      //   100% {
-      //     transform: rotateZ(180deg) rotateX(180deg);
-      //   }
-      // }
-      transform: rotateZ(180deg) rotateX(180deg);
-      -webkit-transition: all 500ms ease;
-      -moz-transition: all 500ms ease;
-      transition: all 500ms ease;
+    &.active {
+      top: 170%;
     }
   }
 }
@@ -283,26 +252,22 @@ a {
 #projects,
 #about,
 #contact {
-  margin: 35vw 0 0;
+  margin: 35vh 0 0;
 }
 
 #hero {
   @include flex-center();
   margin-top: 20%;
   gap: 3em;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-  // animation: animation 500ms ease 0 iteration-count direction fill-mode;
+
   h1 {
     display: flex;
     justify-content: center;
     color: #ffffff;
   }
-}
-
-#hero.active {
-  margin-top: 25%;
-  transition: all 500ms ease;
+  &.active {
+    margin-top: 25%;
+  }
 }
 
 #about {
@@ -464,6 +429,9 @@ footer {
   header {
     margin-top: 0.5em;
     justify-content: space-evenly;
+    img {
+      width: 2.4em;
+    }
     #brand {
       #logo {
         min-width: 17.5em;
@@ -513,7 +481,7 @@ footer {
   #projects,
   #about,
   #contact {
-    margin: 25vw 0 0;
+    margin: 25vh 0 0;
   }
 
   #about,
@@ -527,7 +495,7 @@ footer {
     justify-content: space-around;
 
     img {
-      width: 3.5em;
+      width: 3.3em;
     }
     #brand {
       #logo {
@@ -561,7 +529,7 @@ footer {
   #projects,
   #about,
   #contact {
-    margin: 20vw 0 0;
+    margin: 30vh 0 0;
   }
 
   #about,
@@ -574,7 +542,7 @@ footer {
     margin-top: 1.25em;
     justify-content: space-around;
     img {
-      width: 6.25em;
+      width: 6.125em;
     }
     #brand {
       #logo {
