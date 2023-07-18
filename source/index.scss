@@ -109,6 +109,7 @@ footer {
 #hero,
 #hero.active {
   transition: all 500ms ease;
+  -o-transition: all 500ms ease;
   -ms-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
@@ -124,6 +125,7 @@ header {
   right: 0;
   // shadow
   fill: var(--color-primary);
+
   filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
 
   img {
@@ -183,7 +185,6 @@ header {
     justify-content: center;
     position: absolute;
     top: 70%;
-
     img {
       &.active {
         transform: rotateZ(360deg) rotateX(180deg);
@@ -257,7 +258,7 @@ a {
 
 #hero {
   @include flex-center();
-  margin-top: 20%;
+  margin-top: 10%;
   gap: 3em;
 
   h1 {
@@ -351,8 +352,8 @@ footer {
     }
   }
   header {
-    margin-top: 0.25em;
-    justify-content: space-between;
+    margin-top: 1.25em;
+    // justify-content: space-between;
     #brand {
       #logo {
         min-width: 14em;
@@ -367,16 +368,9 @@ footer {
         font-size: large;
       }
     }
-    // #menu-v {
-    //   img {
-    //     margin-top: -10px;
-    //   }
-    // }
+
     #menu-v.active {
       top: 200%;
-      // img {
-      //   margin-top: 1%;
-      // }
     }
   }
 
@@ -427,7 +421,7 @@ footer {
     }
   }
   header {
-    margin-top: 0.5em;
+    margin-top: 1.5em;
     justify-content: space-evenly;
     img {
       width: 2.4em;
@@ -460,6 +454,7 @@ footer {
     }
     h1 {
       margin: 5em 0;
+      font-size: 1.8em;
     }
   }
   #projects {
@@ -483,7 +478,11 @@ footer {
   #contact {
     margin: 25vh 0 0;
   }
-
+  #hero {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
   #about,
   footer {
     p {
@@ -491,7 +490,7 @@ footer {
     }
   }
   header {
-    margin-top: 1em;
+    margin-top: 1.75em;
     justify-content: space-around;
 
     img {
@@ -539,7 +538,7 @@ footer {
     }
   }
   header {
-    margin-top: 1.25em;
+    margin-top: 2em;
     justify-content: space-around;
     img {
       width: 6.125em;
@@ -554,7 +553,11 @@ footer {
       }
     }
   }
-
+  #hero {
+    h1 {
+      font-size: 3em;
+    }
+  }
   #projects {
     .content {
       :nth-last-child(odd) {
