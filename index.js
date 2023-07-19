@@ -3,14 +3,17 @@
 const menu = document.querySelector(`#menu`);
 const menu_a = menu.querySelectorAll(`a`);
 const menu_v = document.querySelector(`#menu-v`);
-const menu_v_img = menu_v.querySelector(`img`);
-const logo = document.querySelector(`#logo>img`);
+const menu_v_img = document.querySelector(`#menu-v_img`);
+const logo = document.querySelector(`#logo_img`);
 const hero = document.querySelector(`#hero`);
 
-menu_v_img.addEventListener("click", () => {
+menu_v_img.classList.add(`bouncing`);
+
+menu_v_img.addEventListener(`click`, () => {
   menu.classList.toggle(`active`);
   menu_v.classList.toggle(`active`);
   menu_v_img.classList.toggle(`active`);
+  menu_v_img.classList.remove(`bouncing`);
   logo.classList.toggle(`active`);
   hero.classList.toggle(`active`);
 });
@@ -19,6 +22,8 @@ menu_a.forEach((element) => {
   element.addEventListener(`click`, () => {
     menu.classList.toggle(`active`);
     menu_v.classList.toggle(`active`);
+    menu_v_img.classList.toggle(`active`);
+    menu_v_img.classList.remove(`bouncing`);
     logo.classList.toggle(`active`);
     hero.classList.toggle(`active`);
   });

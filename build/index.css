@@ -8,6 +8,33 @@
   --color-light-two: rgb(202, 201, 201);
 }
 
+@keyframes bouncing {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(15px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
+@-webkit-keyframes bouncing {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(15px);
+  }
+  60% {
+    -webkit-transform: translateY(10px);
+  }
+}
+.bouncing {
+  animation: bouncing 3s ease 2000ms infinite alternate both;
+  -webkit-animation: bouncing 3s ease 2000ms infinite alternate both;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -45,14 +72,12 @@ footer {
   width: 100%;
 }
 
-#logo img,
-#logo img.active,
-#menu,
+#logo_img,
+#logo_img.active,
 #menu.active,
-#menu.active a,
 #menu-v,
-#menu-v img,
-#menu-v img.active,
+#menu-v_img,
+#menu-v_img.active,
 #hero,
 #hero.active {
   transition: all 500ms ease;
@@ -60,6 +85,15 @@ footer {
   -ms-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
+}
+
+#menu,
+#menu.active a {
+  transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -webkit-transition: all 1000ms ease;
 }
 
 header {
@@ -74,7 +108,7 @@ header {
   filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
 }
 header img {
-  width: 2.6em;
+  width: 3em;
 }
 header #brand {
   margin: 0 2.5em;
@@ -83,10 +117,34 @@ header #brand #logo {
   display: flex;
   align-items: center;
 }
-header #brand #logo img.active {
+header #brand #logo #brand_img {
+  display: flex;
+  flex-direction: column;
+}
+header #brand #logo #brand_img #menu-v {
+  position: absolute;
+  top: 70%;
+}
+header #brand #logo #brand_img #menu-v #menu-v_img.active {
+  transform: rotateZ(360deg) rotateX(180deg);
+}
+header #brand #logo #brand_img #menu-v #menu-v_img:hover {
+  cursor: pointer;
+}
+header #brand #logo #brand_img #menu-v.active {
+  top: 170%;
+}
+header #brand #logo #brand_img #logo_img.active {
   transform: rotateY(360deg);
 }
-header #brand h1 {
+header #brand #logo #brand_img #menu-v_img.active {
+  transform: rotateZ(360deg) rotateX(180deg);
+}
+header #brand #logo #brand_img #menu-v_img:hover {
+  cursor: pointer;
+}
+header #brand .h1 {
+  font-size: 1em;
   margin: 0 0.5em 0;
   color: rgb(63, 219, 156);
 }
@@ -95,7 +153,7 @@ header #menu {
   display: flex;
   justify-content: space-evenly;
   position: absolute;
-  left: 0;
+  left: 3%;
   right: 0;
   top: -100%;
 }
@@ -115,23 +173,6 @@ header #menu.active a {
 }
 header #menu.active a:hover {
   color: #ffffff;
-}
-header #menu-v {
-  width: -webkit-fill-available;
-  width: -moz-fill-available;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 70%;
-}
-header #menu-v img.active {
-  transform: rotateZ(360deg) rotateX(180deg);
-}
-header #menu-v img:hover {
-  cursor: pointer;
-}
-header #menu-v.active {
-  top: 170%;
 }
 
 .content {
@@ -200,7 +241,7 @@ a:visited {
 #projects,
 #about,
 #contact {
-  margin: 35vh 0 0;
+  margin: 20vh 0 0;
 }
 
 #hero {
@@ -310,9 +351,6 @@ footer p {
   header #brand #logo {
     min-width: 14em;
   }
-  header #brand h1 {
-    font-size: large;
-  }
   header #menu a {
     font-size: large;
   }
@@ -361,17 +399,17 @@ footer p {
     margin-top: 1.5em;
     justify-content: space-evenly;
   }
-  header img {
-    width: 2.4em;
-  }
   header #brand #logo {
     min-width: 17.5em;
   }
-  header #brand h1 {
-    font-size: x-large;
+  header #brand #logo #brand_img img {
+    width: 3.4em;
   }
-  header #menu-v.active {
+  header #brand #logo #brand_img #menu-v.active {
     top: 220%;
+  }
+  header #brand .h1 {
+    font-size: 1.5em;
   }
   #hero {
     min-height: 0;
@@ -423,17 +461,17 @@ footer p {
     margin-top: 1.75em;
     justify-content: space-around;
   }
-  header img {
-    width: 3.3em;
-  }
   header #brand #logo {
     min-width: 23.5em;
   }
-  header #brand h1 {
-    font-size: xx-large;
+  header #brand #logo #brand_img img {
+    width: 5em;
   }
-  header #menu-v.active {
+  header #brand #logo #brand_img #menu-v.active {
     top: 200%;
+  }
+  header #brand .h1 {
+    font-size: 2em;
   }
   #projects .content .project {
     max-width: 44%;
@@ -463,13 +501,13 @@ footer p {
     margin-top: 2em;
     justify-content: space-around;
   }
-  header img {
-    width: 6.125em;
-  }
   header #brand #logo {
     min-width: 31.25em;
   }
-  header #brand h1 {
+  header #brand #logo #brand_img img {
+    width: 6.125em;
+  }
+  header #brand .h1 {
     margin: 0 0.5em 0;
     font-size: 2.5em;
   }
