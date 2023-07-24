@@ -54,7 +54,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(0deg, rgb(24, 35, 42), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.887), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.944), rgba(24, 35, 42, 0.999));
+  background: black;
 }
 
 body {
