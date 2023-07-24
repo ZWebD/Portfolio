@@ -114,15 +114,15 @@ html {
   @include flex-center();
   background: 
   // black;
-    linear-gradient(
-    0deg,
-    rgb(24, 35, 42),
-    rgba(27, 40, 46, 0.887),
-    rgba(31, 46, 53, 0.887),
-    rgba(27, 40, 46, 0.887),
-    rgba(31, 46, 53, 0.944),
-    rgba(24, 35, 42, 0.999)
-  );
+    // linear-gradient(
+    // 0deg,
+    // rgb(24, 35, 42),
+    // rgba(27, 40, 46, 0.887),
+    // rgba(31, 46, 53, 0.887),
+    rgba(27, 40, 46, 0.887);
+  // rgba(31, 46, 53, 0.944),
+  // rgba(24, 35, 42, 0.999)
+  // );
 }
 body {
   max-width: 75em;
