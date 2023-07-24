@@ -42,6 +42,7 @@
 }
 
 html {
+  min-height: calc(100% + env(safe-area-inset-top));
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   color: var(--color-light-two);
   font-family: "Lora", serif;
@@ -54,7 +55,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: black;
+  background: linear-gradient(0deg, rgb(24, 35, 42), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.887), rgba(27, 40, 46, 0.887), rgba(31, 46, 53, 0.944), rgba(24, 35, 42, 0.999));
 }
 
 body {

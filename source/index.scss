@@ -100,6 +100,7 @@ $--color-primary: rgb(62, 217, 154);
 }
 
 html {
+  min-height: calc(100% + env(safe-area-inset-top));
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
   // background: var(--color-dark-one);
@@ -111,16 +112,17 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include flex-center();
-  background: black;
-  // linear-gradient(
-  //   0deg,
-  //   rgb(24, 35, 42),
-  //   rgba(27, 40, 46, 0.887),
-  //   rgba(31, 46, 53, 0.887),
-  //   rgba(27, 40, 46, 0.887),
-  //   rgba(31, 46, 53, 0.944),
-  //   rgba(24, 35, 42, 0.999)
-  // );
+  background: 
+  // black;
+    linear-gradient(
+    0deg,
+    rgb(24, 35, 42),
+    rgba(27, 40, 46, 0.887),
+    rgba(31, 46, 53, 0.887),
+    rgba(27, 40, 46, 0.887),
+    rgba(31, 46, 53, 0.944),
+    rgba(24, 35, 42, 0.999)
+  );
 }
 body {
   max-width: 75em;
