@@ -60,10 +60,7 @@ body {
   max-width: 75em;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
+  padding: env(safe-area-insert-top, 20px) env(safe-area-inset-right, 20px) env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 
 body,
@@ -160,7 +157,7 @@ header #menu {
 header #menu a {
   width: -webkit-fill-available;
   width: -moz-fill-available;
-  color: rgba(62, 217, 154, 0);
+  color: rgba(63, 217, 156, 0);
   margin: 0.6em 0 0.3em;
   font-size: x-large;
   font-weight: 700;
@@ -169,10 +166,10 @@ header #menu.active {
   top: 100%;
 }
 header #menu.active a {
-  color: #3ed99a;
+  color: rgb(63, 217, 156);
 }
 header #menu.active a:hover {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 
 .content {
@@ -197,7 +194,7 @@ header #menu.active a:hover {
   width: 100%;
   height: 0;
   border-style: solid;
-  border-color: transparent #d9d9d9 transparent;
+  border-color: transparent rgb(217, 217, 217) transparent;
   opacity: 0.5;
   left: 0;
   top: 0;
@@ -206,7 +203,7 @@ header #menu.active a:hover {
 .section {
   position: absolute;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(62, 217, 154, 0.9), rgba(45, 164, 116, 0.9), rgba(20, 29, 34, 0.9));
+  background: linear-gradient(180deg, #1d9464, rgba(62, 217, 154, 0.9), rgba(45, 164, 116, 0.9), rgba(20, 29, 34, 0.9));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
@@ -256,7 +253,7 @@ a:visited {
 #hero h1 {
   display: flex;
   justify-content: center;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 #hero.active {
   margin-top: 25%;
@@ -329,6 +326,13 @@ a:visited {
   align-items: center;
   text-align: center;
 }
+#contact .media a svg {
+  width: 72px;
+  height: 72px;
+  margin: 1em 2em 2em;
+  fill: var(--color-primary);
+  filter: drop-shadow(8px 8px 1px rgba(0, 0, 0, 0.3));
+}
 #contact #contact_form {
   padding: 1.2em;
   display: none;
@@ -388,6 +392,10 @@ footer p {
   }
   .section {
     font-size: 4em;
+  }
+  #contact .media a svg {
+    width: 48px;
+    height: 48px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -529,12 +537,6 @@ footer p {
     font-size: 7em;
   }
 }
-.media a svg {
-  margin: 2em;
-  fill: var(--color-primary);
-  filter: drop-shadow(8px 8px 1px rgba(0, 0, 0, 0.3));
-}
-
 /* Content form */
 input[type=text],
 textarea {
