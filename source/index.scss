@@ -100,6 +100,8 @@ $--color-primary: rgb(62, 217, 154);
 }
 
 html {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
   // background: var(--color-dark-one);
   color: var(--color-light-two);
   font-family: "Lora", serif;
@@ -123,8 +125,6 @@ body {
   max-width: 75em;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
-  padding: env(safe-area-insert-top, 20px) env(safe-area-inset-right, 20px)
-    env(safe-area-inset-bottom, 20px) env(safe-area-inset-left, 20px);
 }
 
 // head,
@@ -181,14 +181,9 @@ header {
       display: flex;
       align-items: center;
       #brand_img {
-        // margin-top: 2.3em;
         display: flex;
         flex-direction: column;
         #menu-v {
-          // width: -webkit-fill-available;
-          // width: -moz-fill-available;
-          // display: flex;
-          // justify-content: center;
           position: absolute;
           top: 70%;
           #menu-v_img {
@@ -256,25 +251,6 @@ header {
       }
     }
   }
-  // #menu-v {
-  //   width: -webkit-fill-available;
-  //   width: -moz-fill-available;
-  //   display: flex;
-  //   justify-content: center;
-  //   position: absolute;
-  //   top: 70%;
-  //   #menu-v_img {
-  //     &.active {
-  //       transform: rotateZ(360deg) rotateX(180deg);
-  //     }
-  //     &:hover {
-  //       cursor: pointer;
-  //     }
-  //   }
-  //   &.active {
-  //     top: 170%;
-  //   }
-  // }
 }
 
 .content {
