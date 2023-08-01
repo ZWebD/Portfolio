@@ -13,7 +13,7 @@ const project_array = [
   {
     picture: `https://github.com/ZWebD/MapTrack/raw/main/screencapture-serene-bonbon-84c4b5-netlify-app-2023-07-25-10_34_27.png`,
     h2: `MapTrack`,
-    p: `Is a small activity tracker app You can record your Running / Cycling exercises with.`,
+    p: `It's a small App for recording Running and Cycling exercises`,
     git: `https://serene-bonbon-84c4b5.netlify.app/`,
     demo: `https://github.com/ZWebD/MapTrack`,
   },
@@ -25,11 +25,11 @@ const project_array = [
     demo: ``,
   },
   {
-    picture: ``,
-    h2: ``,
-    p: ``,
-    git: ``,
-    demo: ``,
+    picture: `https://screenshot-proxy.netlify.app/f_jpg,w_336/https://d33wubrfki0l68.cloudfront.net/6374a82e12e31e2e62ce331a/screenshot_2022-11-16-09-07-02-0000.png`,
+    h2: `Guess a Number game`,
+    p: `Guess a number between 1 and 20 the game will tell you whether the number is higher or lower.`,
+    git: `https://github.com/ZWebD/NumberGuess`,
+    demo: `https://jade-crisp-d9ffdf.netlify.app/`,
   },
   {
     picture: ``,
@@ -63,8 +63,11 @@ menu_a.forEach((element) => {
 });
 
 (() => {
-  project_array.forEach((e) => {
-    let html = `
+  project_array
+    .slice()
+    .reverse()
+    .forEach((e) => {
+      let html = `
       <div class="project">
       <picture class="p_pic">
       <source srcset="${e.picture}" media="" />
@@ -84,36 +87,7 @@ menu_a.forEach((element) => {
       </a>
           </div>
           </div>`;
-    console.log(html);
-    projects_place.insertAdjacentHTML("afterend", html);
-  });
+
+      projects_place.insertAdjacentHTML("afterend", html);
+    });
 })();
-
-// /* When the user clicks on the button,
-// toggle between hiding and showing the dropdown content */
-// function myFunction() {
-//   let show = document.getElementById("menu");
-//   show.style.display = "block";
-// }
-
-// // JavaScript to close the dropdown menu if the user clicks outside of it
-// window.onclick = function (event) {
-//   console.log(event);
-//   if (
-//     !event.target.matches("#menu-logo") ||
-//     !event.target.matches("#menu > a")
-//   ) {
-//     let dropdowns = document.getElementsByTagName("nav");
-//     console.log(dropdowns.length);
-//     let i;
-//     for (i = 0; i < dropdowns.length; i++) {
-//       console.log(i);
-//       console.log(dropdowns[i]);
-//       let openDropdown = dropdowns[i];
-//       console.log(openDropdown);
-//       if (openDropdown.style.display === "block") {
-//         openDropdown.style.display = "none";
-//       }
-//     }
-//   }
-// };

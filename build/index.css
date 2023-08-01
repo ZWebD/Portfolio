@@ -123,6 +123,7 @@ header #brand {
 header #brand #logo {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 header #brand #logo #brand_img {
   display: flex;
@@ -169,8 +170,8 @@ header #menu a {
   width: -webkit-fill-available;
   width: -moz-fill-available;
   color: rgba(63, 217, 156, 0);
-  margin: 0.6em 0 0.3em;
-  font-size: x-large;
+  margin: 0.2em 0 0.3em;
+  font-size: 2.5em;
   font-weight: 700;
 }
 header #menu.active {
@@ -319,6 +320,8 @@ header #menu.active a:hover {
 #projects .content .project picture img {
   width: 150px;
   height: 140px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5%;
 }
 #projects .content .project .detail {
   flex-grow: 0;
@@ -331,6 +334,7 @@ header #menu.active a:hover {
 }
 #projects .content .project .detail div {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-evenly;
 }
 #projects .content .project .detail div a {
@@ -358,10 +362,6 @@ header #menu.active a:hover {
   margin: 1em 2em 2em;
   fill: var(--color-primary);
   filter: drop-shadow(8px 8px 1px rgba(0, 0, 0, 0.3));
-}
-#contact #contact_form {
-  padding: 1.2em;
-  display: none;
 }
 
 footer {
@@ -452,6 +452,9 @@ footer a:visited {
   }
   header #brand .h1 {
     font-size: 1.5em;
+  }
+  header #menu a {
+    font-size: 2em;
   }
   #hero {
     min-height: 0;

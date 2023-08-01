@@ -40,7 +40,7 @@ $--color-primary: rgb(62, 217, 154);
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  // filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.3));
+
   filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
 
   font-weight: 700;
@@ -105,7 +105,7 @@ html {
   min-height: calc(100% + env(safe-area-inset-top));
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
-  // background: var(--color-dark-one);
+
   color: var(--color-light-two);
   font-family: "Lora", serif;
   font-style: normal;
@@ -139,7 +139,6 @@ footer {
 }
 
 // taking away the basic link style
-
 a {
   text-decoration: none;
   &:visited {
@@ -193,6 +192,7 @@ header {
     #logo {
       display: flex;
       align-items: center;
+      justify-content: center;
       #brand_img {
         display: flex;
         flex-direction: column;
@@ -249,8 +249,8 @@ header {
       width: -webkit-fill-available;
       width: -moz-fill-available;
       color: rgba(63, 217, 156, 0);
-      margin: 0.6em 0 0.3em;
-      font-size: x-large;
+      margin: 0.2em 0 0.3em;
+      font-size: 2.5em;
       font-weight: 700;
     }
     &.active {
@@ -385,6 +385,8 @@ header {
         img {
           width: 150px;
           height: 140px;
+          border: 1px solid rgb(255, 255, 255);
+          border-radius: 5%;
         }
       }
       .detail {
@@ -397,6 +399,7 @@ header {
         }
         div {
           display: flex;
+          flex-direction: row-reverse;
           justify-content: space-evenly;
           a {
             text-decoration: none;
@@ -428,10 +431,6 @@ header {
       }
     }
   }
-  #contact_form {
-    padding: 1.2em;
-    display: none;
-  }
 }
 
 footer {
@@ -458,15 +457,11 @@ footer {
   }
   header {
     margin-top: 1.25em;
-    // justify-content: space-between;
+
     #brand {
       #logo {
         min-width: 14em;
       }
-
-      // h1 {
-      //   font-size: large;
-      // }
     }
     #menu {
       a {
@@ -552,6 +547,11 @@ footer {
       }
       .h1 {
         font-size: 1.5em;
+      }
+    }
+    #menu {
+      a {
+        font-size: 2em;
       }
     }
   }
