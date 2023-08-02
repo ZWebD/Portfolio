@@ -112,13 +112,7 @@ a {
 // Transitioning
 #logo_img,
 #logo_img.active,
-#menu,
-#menu.active,
-#menu-v,
-#menu-v_img,
-#menu-v_img.active,
-#hero,
-#hero.active {
+#menu.active {
   transition: transform 500ms ease;
   -o-transition: transform 500ms ease;
   -ms-transition: transform 500ms ease;
@@ -126,6 +120,26 @@ a {
   -webkit-transition: transform 500ms ease;
 }
 
+#menu-v,
+#menu-v_img,
+#menu-v_img.active {
+  transition: all 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -o-transition: all 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -ms-transition: all 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -moz-transition: all 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -webkit-transition: all 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+#hero,
+#hero.active {
+  transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+}
+
+#menu,
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
@@ -202,7 +216,7 @@ header {
           top: 70%;
           #menu-v_img {
             &.active {
-              transform: rotateZ(360deg) rotateX(180deg);
+              transform: rotateX(180deg);
             }
             &:hover {
               cursor: pointer;
