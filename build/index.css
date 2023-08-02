@@ -144,12 +144,6 @@ header #brand #logo #brand_img #menu-v.active {
 header #brand #logo #brand_img #logo_img.active {
   transform: rotateY(360deg);
 }
-header #brand #logo #brand_img #menu-v_img.active {
-  transform: rotateZ(360deg) rotateX(180deg);
-}
-header #brand #logo #brand_img #menu-v_img:hover {
-  cursor: pointer;
-}
 header #brand .h1 {
   display: flex;
   justify-content: center;

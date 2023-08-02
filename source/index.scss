@@ -217,14 +217,14 @@ header {
             transform: rotateY(360deg);
           }
         }
-        #menu-v_img {
-          &.active {
-            transform: rotateZ(360deg) rotateX(180deg);
-          }
-          &:hover {
-            cursor: pointer;
-          }
-        }
+        // #menu-v_img {
+        //   &.active {
+        //     transform: rotateZ(360deg) rotateX(180deg);
+        //   }
+        //   &:hover {
+        //     cursor: pointer;
+        //   }
+        // }
       }
     }
 
