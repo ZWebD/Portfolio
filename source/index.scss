@@ -147,10 +147,8 @@ a {
 }
 
 // Transitioning
-#logo,
 #logo_img,
 #logo_img.active,
-#menu,
 #menu.active,
 #menu-v,
 #menu-v_img,
@@ -163,6 +161,7 @@ a {
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
 }
+#menu,
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
