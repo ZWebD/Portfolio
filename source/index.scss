@@ -58,43 +58,6 @@ $--color-primary: rgb(62, 217, 154);
   }
 }
 
-// Animating menu-v
-
-@keyframes bouncing {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(15px);
-  }
-  60% {
-    transform: translateY(10px);
-  }
-}
-@-webkit-keyframes bouncing {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(15px);
-  }
-  60% {
-    -webkit-transform: translateY(10px);
-  }
-}
-.bouncing {
-  animation: bouncing 3s ease 2000ms infinite alternate both;
-  -webkit-animation: bouncing 3s ease 2000ms infinite alternate both;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -149,6 +112,7 @@ a {
 // Transitioning
 #logo_img,
 #logo_img.active,
+#menu,
 #menu.active,
 #menu-v,
 #menu-v_img,
@@ -161,13 +125,50 @@ a {
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
 }
-#menu,
+
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
   -ms-transition: all 1000ms ease;
   -moz-transition: all 1000ms ease;
   -webkit-transition: all 1000ms ease;
+}
+
+// Animating menu-v
+
+@keyframes bouncing {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(15px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
+@-webkit-keyframes bouncing {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(15px);
+  }
+  60% {
+    -webkit-transform: translateY(10px);
+  }
+}
+.bouncing {
+  animation: bouncing 3s ease 2000ms infinite alternate both;
+  -webkit-animation: bouncing 3s ease 2000ms infinite alternate both;
 }
 
 header {
@@ -229,9 +230,10 @@ header {
 
     .h1 {
       display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 1em;
-      margin: 0 0.5em 0;
-      // color: rgb(63, 219, 156);
+      margin: 0 0.5em;
       color: var(--color-primary);
     }
   }
@@ -475,7 +477,7 @@ footer {
   }
 
   #hero {
-    // min-height: 0;
+    min-height: 0;
     #triangle1 {
       z-index: 1;
       border-width: 0 0 2vh 100vw;
@@ -556,7 +558,7 @@ footer {
     }
   }
   #hero {
-    // min-height: 0;
+    min-height: 0;
     #triangle1 {
       z-index: 1;
       border-width: 0 0 1.5vh 100vw;
@@ -669,7 +671,7 @@ footer {
         }
       }
       .h1 {
-        margin: 0 0.5em 0;
+        // margin: 0 0.5em;
         font-size: 2.5em;
       }
     }

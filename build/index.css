@@ -8,33 +8,6 @@
   --color-light-two: rgb(202, 201, 201);
 }
 
-@keyframes bouncing {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(15px);
-  }
-  60% {
-    transform: translateY(10px);
-  }
-}
-@-webkit-keyframes bouncing {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(15px);
-  }
-  60% {
-    -webkit-transform: translateY(10px);
-  }
-}
-.bouncing {
-  animation: bouncing 3s ease 2000ms infinite alternate both;
-  -webkit-animation: bouncing 3s ease 2000ms infinite alternate both;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -81,6 +54,7 @@ a:visited {
 
 #logo_img,
 #logo_img.active,
+#menu,
 #menu.active,
 #menu-v,
 #menu-v_img,
@@ -94,13 +68,39 @@ a:visited {
   -webkit-transition: all 500ms ease;
 }
 
-#menu,
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
   -ms-transition: all 1000ms ease;
   -moz-transition: all 1000ms ease;
   -webkit-transition: all 1000ms ease;
+}
+
+@keyframes bouncing {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(15px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
+@-webkit-keyframes bouncing {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(15px);
+  }
+  60% {
+    -webkit-transform: translateY(10px);
+  }
+}
+.bouncing {
+  animation: bouncing 3s ease 2000ms infinite alternate both;
+  -webkit-animation: bouncing 3s ease 2000ms infinite alternate both;
 }
 
 header {
@@ -153,8 +153,10 @@ header #brand #logo #brand_img #menu-v_img:hover {
 }
 header #brand .h1 {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1em;
-  margin: 0 0.5em 0;
+  margin: 0 0.5em;
   color: var(--color-primary);
 }
 header #menu {
@@ -395,6 +397,9 @@ footer a:visited {
   header #menu-v.active {
     top: 200%;
   }
+  #hero {
+    min-height: 0;
+  }
   #hero #triangle1 {
     z-index: 1;
     border-width: 0 0 2vh 100vw;
@@ -452,6 +457,9 @@ footer a:visited {
   }
   header #menu a {
     font-size: 2em;
+  }
+  #hero {
+    min-height: 0;
   }
   #hero #triangle1 {
     z-index: 1;
@@ -547,7 +555,6 @@ footer a:visited {
     width: 6.125em;
   }
   header #brand .h1 {
-    margin: 0 0.5em 0;
     font-size: 2.5em;
   }
   #hero h1 {
