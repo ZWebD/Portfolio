@@ -52,6 +52,20 @@ a:visited {
   text-decoration: none;
 }
 
+#menu,
+#menu.active,
+#menu-v,
+#menu-v_img,
+#menu-v_img.active,
+#hero,
+#hero.active {
+  transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+}
+
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
@@ -425,7 +439,6 @@ footer a:visited {
   }
   header {
     margin-top: 1.5em;
-    justify-content: space-evenly;
   }
   header #brand #logo {
     min-width: 17.5em;
@@ -490,7 +503,6 @@ footer a:visited {
   }
   header {
     margin-top: 1.75em;
-    justify-content: space-around;
   }
   header #brand #logo {
     min-width: 23.5em;
@@ -530,7 +542,6 @@ footer a:visited {
   }
   header {
     margin-top: 2em;
-    justify-content: space-around;
   }
   header #brand #logo {
     min-width: 31.25em;

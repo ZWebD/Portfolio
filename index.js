@@ -47,7 +47,7 @@ menu_v_img.addEventListener(`click`, () => {
   menu_v.classList.toggle(`active`);
   menu_v_img.classList.toggle(`active`);
   menu_v_img.classList.remove(`bouncing`);
-  logo.classList.toggle(`active`);
+  // logo.classList.toggle(`active`);
   hero.classList.toggle(`active`);
 });
 
@@ -57,7 +57,7 @@ menu_a.forEach((element) => {
     menu_v.classList.toggle(`active`);
     menu_v_img.classList.toggle(`active`);
     menu_v_img.classList.remove(`bouncing`);
-    logo.classList.toggle(`active`);
+    // logo.classList.toggle(`active`);
     hero.classList.toggle(`active`);
   });
 });
