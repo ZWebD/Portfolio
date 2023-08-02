@@ -112,19 +112,19 @@ a {
 // Transitioning
 // #logo_img,
 // #logo_img.active,
-#menu,
-#menu.active,
-#menu-v,
-#menu-v_img,
-#menu-v_img.active,
-#hero,
-#hero.active {
-  transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-}
+// #menu,
+// #menu.active,
+// #menu-v,
+// #menu-v_img,
+// #menu-v_img.active,
+// #hero,
+// #hero.active {
+//   transition: all 500ms ease;
+//   -o-transition: all 500ms ease;
+//   -ms-transition: all 500ms ease;
+//   -moz-transition: all 500ms ease;
+//   -webkit-transition: all 500ms ease;
+// }
 
 #menu.active a {
   transition: all 1000ms ease;

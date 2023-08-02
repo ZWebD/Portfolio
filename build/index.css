@@ -52,20 +52,6 @@ a:visited {
   text-decoration: none;
 }
 
-#menu,
-#menu.active,
-#menu-v,
-#menu-v_img,
-#menu-v_img.active,
-#hero,
-#hero.active {
-  transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-}
-
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
