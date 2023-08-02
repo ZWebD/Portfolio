@@ -79,8 +79,10 @@ a:visited {
   text-decoration: none;
 }
 
+#logo,
 #logo_img,
 #logo_img.active,
+#menu,
 #menu.active,
 #menu-v,
 #menu-v_img,
@@ -94,7 +96,6 @@ a:visited {
   -webkit-transition: all 500ms ease;
 }
 
-#menu,
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
@@ -395,9 +396,6 @@ footer a:visited {
   header #menu-v.active {
     top: 200%;
   }
-  #hero {
-    min-height: 0;
-  }
   #hero #triangle1 {
     z-index: 1;
     border-width: 0 0 2vh 100vw;
@@ -455,9 +453,6 @@ footer a:visited {
   }
   header #menu a {
     font-size: 2em;
-  }
-  #hero {
-    min-height: 0;
   }
   #hero #triangle1 {
     z-index: 1;

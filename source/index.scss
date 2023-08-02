@@ -147,8 +147,10 @@ a {
 }
 
 // Transitioning
+#logo,
 #logo_img,
 #logo_img.active,
+#menu,
 #menu.active,
 #menu-v,
 #menu-v_img,
@@ -161,7 +163,6 @@ a {
   -moz-transition: all 500ms ease;
   -webkit-transition: all 500ms ease;
 }
-#menu,
 #menu.active a {
   transition: all 1000ms ease;
   -o-transition: all 1000ms ease;
@@ -475,7 +476,7 @@ footer {
   }
 
   #hero {
-    min-height: 0;
+    // min-height: 0;
     #triangle1 {
       z-index: 1;
       border-width: 0 0 2vh 100vw;
@@ -556,7 +557,7 @@ footer {
     }
   }
   #hero {
-    min-height: 0;
+    // min-height: 0;
     #triangle1 {
       z-index: 1;
       border-width: 0 0 1.5vh 100vw;
