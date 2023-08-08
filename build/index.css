@@ -95,10 +95,10 @@ a:visited {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(15px);
+    transform: translateY(1rem);
   }
   60% {
-    transform: translateY(10px);
+    transform: translateY(0.85rem);
   }
 }
 @-webkit-keyframes bouncing {
@@ -106,10 +106,10 @@ a:visited {
     -webkit-transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(15px);
+    -webkit-transform: translateY(1rem);
   }
   60% {
-    -webkit-transform: translateY(10px);
+    -webkit-transform: translateY(0.85rem);
   }
 }
 .bouncing {
@@ -129,10 +129,10 @@ header {
   filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
 }
 header img {
-  width: 3em;
+  width: 3rem;
 }
 header #brand {
-  margin: 0 2.5em;
+  margin: 0 2.5rem;
 }
 header #brand #logo {
   display: flex;
@@ -163,8 +163,8 @@ header #brand .h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
-  margin: 0 0.5em;
+  font-size: 1rem;
+  margin: 0 0.5rem;
   color: var(--color-primary);
 }
 header #menu {
@@ -180,8 +180,8 @@ header #menu a {
   width: -webkit-fill-available;
   width: -moz-fill-available;
   color: rgba(63, 217, 156, 0);
-  margin: 0.2em 0 0.3em;
-  font-size: 2.5em;
+  margin: 0.2rem 0 0.3rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 header #menu.active {
@@ -200,10 +200,10 @@ header #menu.active a:hover {
 }
 
 .button {
-  padding: 0 0.6em;
-  height: 1.3em;
+  padding: 0 0.6rem;
+  height: 1.3rem;
   background: var(--color-primary);
-  border-radius: 0.8em;
+  border-radius: 0.8rem;
   border: none;
   cursor: pointer;
   color: var(--color-dark-one);
@@ -231,8 +231,8 @@ header #menu.active a:hover {
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.3));
   font-weight: 700;
-  font-size: 5em;
-  line-height: 1.8em;
+  font-size: 5rem;
+  line-height: 4rem;
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -247,13 +247,7 @@ header #menu.active a:hover {
 #projects,
 #about,
 #contact {
-  min-height: 33.3333333333vh;
-}
-
-#projects,
-#about,
-#contact {
-  margin: 20vh 0 0;
+  margin: 25vh 0 0;
 }
 
 #hero {
@@ -263,7 +257,7 @@ header #menu.active a:hover {
   align-items: center;
   text-align: center;
   margin-top: 10%;
-  gap: 3em;
+  gap: 3rem;
 }
 #hero h1 {
   display: flex;
@@ -288,11 +282,11 @@ header #menu.active a:hover {
   width: max-content;
 }
 #about .content p {
-  padding: 1em;
-  border-radius: 1em;
+  padding: 1rem;
+  border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.18);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 1em;
+  margin: 1rem;
   word-wrap: break-word;
   hyphens: auto;
   text-align: justify;
@@ -312,7 +306,7 @@ header #menu.active a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 #projects .content .project {
   max-width: 45%;
@@ -320,10 +314,10 @@ header #menu.active a:hover {
   flex-direction: row;
   justify-content: center;
   display: flex;
-  padding: 1em;
-  margin: 1em;
-  gap: 1em;
-  border-radius: 1em;
+  padding: 0.75rem;
+  margin: 0.75rem;
+  gap: 0.75rem;
+  border-radius: 1rem;
   background-color: rgba(0, 0, 0, 0.18);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -336,11 +330,9 @@ header #menu.active a:hover {
 #projects .content .project .detail {
   flex-grow: 0;
 }
-#projects .content .project .detail h2 {
-  padding-bottom: 0.5em;
-}
+#projects .content .project .detail h2,
 #projects .content .project .detail p {
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 }
 #projects .content .project .detail div {
   display: flex;
@@ -369,16 +361,16 @@ header #menu.active a:hover {
 #contact .media a svg {
   width: 72px;
   height: 72px;
-  margin: 1em 2em 2em;
+  margin: 1rem 2rem 2rem;
   fill: var(--color-primary);
   filter: drop-shadow(8px 8px 1px rgba(0, 0, 0, 0.3));
 }
 
 footer {
-  padding: 1.2em 0 0.2em;
+  padding: 1.2rem 0 0.2rem;
 }
 footer p {
-  margin-bottom: 1.25em;
+  margin-bottom: 1.25rem;
 }
 footer a {
   text-decoration: none;
@@ -391,13 +383,13 @@ footer a:visited {
 
 @media screen and (max-width: 480px) {
   * p {
-    font-size: 1em;
+    font-size: 1rem;
   }
   header {
-    margin-top: 1.25em;
+    margin-top: 1.25rem;
   }
   header #brand #logo {
-    min-width: 14em;
+    min-width: 14rem;
   }
   header #menu a {
     font-size: large;
@@ -421,7 +413,7 @@ footer a:visited {
     border-width: 0 0 7vh 100vw;
   }
   #hero h1 {
-    margin: 5em 0;
+    margin: 5rem 0;
   }
   #about .content {
     max-width: none;
@@ -435,35 +427,37 @@ footer a:visited {
     align-items: center;
   }
   .section {
-    font-size: 4em;
+    font-size: 4rem;
+    line-height: 3rem;
   }
   #contact .media a svg {
     width: 48px;
     height: 48px;
+    margin: 1rem;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   #about p,
   footer p {
-    font-size: 1em;
+    font-size: 1rem;
   }
   header {
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
   }
   header #brand #logo {
-    min-width: 17.5em;
+    min-width: 17.5rem;
   }
   header #brand #logo #brand_img img {
-    width: 3.4em;
+    width: 3.4rem;
   }
   header #brand #logo #brand_img #menu-v.active {
     top: 220%;
   }
   header #brand .h1 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   header #menu a {
-    font-size: 2em;
+    font-size: 2rem;
   }
   #hero {
     min-height: 0;
@@ -481,8 +475,8 @@ footer a:visited {
     border-width: 0 0 5vh 100vw;
   }
   #hero h1 {
-    margin: 5em 0;
-    font-size: 1.8em;
+    margin: 5rem 0;
+    font-size: 1.8rem;
   }
   #projects .content .project {
     max-width: none;
@@ -490,7 +484,7 @@ footer a:visited {
     align-items: center;
   }
   .section {
-    font-size: 5em;
+    font-size: 5rem;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
@@ -505,26 +499,26 @@ footer a:visited {
     margin: 25vh 0 0;
   }
   #hero h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
   }
   #about p,
   footer p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
   header {
-    margin-top: 1.75em;
+    margin-top: 1.75rem;
   }
   header #brand #logo {
-    min-width: 23.5em;
+    min-width: 23.5rem;
   }
   header #brand #logo #brand_img img {
-    width: 5em;
+    width: 5rem;
   }
   header #brand #logo #brand_img #menu-v.active {
     top: 200%;
   }
   header #brand .h1 {
-    font-size: 2em;
+    font-size: 2rem;
   }
   #projects .content .project {
     max-width: 44%;
@@ -532,7 +526,8 @@ footer a:visited {
     align-items: center;
   }
   .section {
-    font-size: 6em;
+    font-size: 6rem;
+    line-height: 5rem;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -548,22 +543,25 @@ footer a:visited {
   }
   #about p,
   footer p {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
   header {
-    margin-top: 2em;
+    margin-top: 4rem;
   }
   header #brand #logo {
-    min-width: 31.25em;
+    min-width: 31.25rem;
   }
   header #brand #logo #brand_img img {
-    width: 6.125em;
+    width: 6.125rem;
   }
   header #brand .h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
+  }
+  #hero {
+    margin-top: 20%;
   }
   #hero h1 {
-    font-size: 3em;
+    font-size: 3rem;
   }
   #projects .content :nth-last-child(odd) {
     flex-direction: row-reverse;
@@ -577,7 +575,8 @@ footer a:visited {
     align-items: center;
   }
   .section {
-    font-size: 7em;
+    font-size: 7rem;
+    line-height: 6rem;
   }
 }
 /* Content form */
