@@ -68,25 +68,26 @@ menu_a.forEach((element) => {
     .reverse()
     .forEach((e) => {
       let html = `
-      <div class="project">
+    <div class="project">
       <picture class="p_pic">
       <source srcset="${e.picture}" media="" />
       <img src="${e.picture ? e.picture : `img/Rectangle5.svg`}" alt="" />
       </picture>
-      <div class="detail">
+     <div class="detail">
       <h2>${e.h2}</h2>
       <p>
       ${e.p}
       </p>
-      <div>
+     <div>
       <a class="button" target="_blank" href="${e.demo}">
       Live Demo
       </a>
       <a class="button" target="_blank" href="${e.git}">
       GitHub
       </a>
-          </div>
-          </div>`;
+     </div>
+     </div>
+    </div>`;
 
       projects_place.insertAdjacentHTML("afterend", html);
     });

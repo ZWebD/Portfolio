@@ -332,14 +332,16 @@ header #menu.active a:hover {
 }
 #projects .content .project .detail h2,
 #projects .content .project .detail p {
+  max-width: 15rem;
   padding-bottom: 0.5rem;
 }
 #projects .content .project .detail div {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 #projects .content .project .detail div a {
+  margin: 0 0.5rem;
   text-decoration: none;
   color: var(--color-dark-one);
 }
@@ -423,6 +425,7 @@ footer a:visited {
   }
   #projects .content .project {
     max-width: none;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
   }
