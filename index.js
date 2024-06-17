@@ -14,29 +14,16 @@ const project_array = [
     picture: `https://github.com/ZWebD/MapTrack/raw/main/screencapture-serene-bonbon-84c4b5-netlify-app-2023-07-25-10_34_27.png`,
     h2: `MapTrack`,
     p: `It's a small App for recording Running and Cycling exercises`,
-    git: `https://serene-bonbon-84c4b5.netlify.app/`,
-    demo: `https://github.com/ZWebD/MapTrack`,
+    git: `https://github.com/ZWebD/MapTrack`,
+    demo: `https://serene-bonbon-84c4b5.netlify.app/`,
   },
-  {
-    picture: ``,
-    h2: ``,
-    p: ``,
-    git: ``,
-    demo: ``,
-  },
+
   {
     picture: `https://screenshot-proxy.netlify.app/f_jpg,w_336/https://d33wubrfki0l68.cloudfront.net/6374a82e12e31e2e62ce331a/screenshot_2022-11-16-09-07-02-0000.png`,
     h2: `Guess a Number`,
     p: `Guess a number between 1 and 20 the game will tell you whether the number is higher or lower.`,
     git: `https://github.com/ZWebD/NumberGuess`,
     demo: `https://jade-crisp-d9ffdf.netlify.app/`,
-  },
-  {
-    picture: ``,
-    h2: ``,
-    p: ``,
-    git: ``,
-    demo: ``,
   },
 ];
 
