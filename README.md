@@ -9,4 +9,4 @@
         <li><strong>Simple Design:</strong> A straightforward and clean layout, focusing on content presentation.</li>
     </ul>
 
-<kbd><img src="/.netlify/images?url=https://d33wubrfki0l68.cloudfront.net/66703d8b3e84c70008e2db1a/screenshot_2024-06-17-13-44-16-0000.webp&amp;fit=cover&amp;h=330&amp;w=528" alt="screenshot"></kbd>
+<kbd><img src="https://github.com/ZWebD/Portfolio/blob/main/review.png" alt="screenshot"></kbd>
